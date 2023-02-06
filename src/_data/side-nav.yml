@@ -150,7 +150,23 @@
         - title: Objective-C and Swift interop
           permalink: /guides/libraries/objective-c-interop
         - title: JavaScript interop
-          permalink: /web/js-interop
+          children:
+          - title: Overview
+            permalink: /web/js-interop
+          - title: Reference
+            permalink: /web/js-interop/reference
+          - title: How to interop with DOM APIs
+            permalink: /web/js-interop/dom
+          - title: How to interop with JavaScript libraries and apps
+            permalink: /web/js-interop/js-app
+          - title: How to test and mock JavaScript interop in Dart
+            permalink: /web/js-interop/test-and-mock
+          - title: Non-static JS interop
+            permalink: /web/js-interop/past-js-interop
+          - title: Migration
+            permalink: /web/js-interop/migration
+          - title: FAQ & troubleshooting
+            permalink: /web/js-interop/faq-troubleshooting
     - title: Google APIs
       permalink: /guides/google-apis
     - title: Multi-platform apps
