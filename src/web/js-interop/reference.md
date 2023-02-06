@@ -34,7 +34,9 @@ and methods, as well as *static* external getters, setters, and methods.
 // 
 ```
 
-[Inline classes]: /link to language feature page, TO DO
+[Inline classes]: /
+
+// *TO DO: link to inline class page*
 
 ### `external`
 
