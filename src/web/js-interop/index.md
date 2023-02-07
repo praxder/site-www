@@ -1,7 +1,7 @@
 ---
 title: JavaScript interoperability
 short-title: JS interop
-description: "Use package:js to integrate JavaScript code into your Dart web app."
+description: Integrate JavaScript code into your Dart web app.
 ---
 
 The [Dart web platform](/overview#web-platform) supports communication with
@@ -9,12 +9,6 @@ JavaScript apps and libraries, and browser DOM APIs, using the `js_interop`
 package, also known as `dart:js_interop`.
 Web developers can benefit from using external JS libraries in their Dart code, without
 having to rewrite anything in Dart.
-
-// *Not sure if we want to actually put this on the page, but to summarize:*
-
-This page introduces our JS interop model, walks through a brief example showing
-just how easy JS interop with Dart is, highlights the major features of our JS interop strategy,
-and then summarizes the rest of our docs on JS interop so you know where to go next.
 
 ## Static interop
 
@@ -29,10 +23,24 @@ without the overhead of a traditional class, enabling zero cost wrapping.
 
 ### Why static interop?
 
-Desire to decouple core of dart from where it’s embedded
-Rather just provide the capabilities to access the embedder
-Past renditions of js interop had us owning too much of the process of writing everything from the bindings to the browser
-Capabilities of past options were not primed to handle that decoupling, had limitations around using the DOM, typing, etc., so static interop was developed to solve those shortcomings
+Static interop represents the desire to decouple Dart's "core" from the platform
+where it's embedded
+(*maybe definition of "embedded" or examples here, like the browser, Flutter, etc.?*).
+
+Our [previous iterations of JS interop][] provided the capabillity
+to access the embedder, but were not primed to handle that decoupling.
+Too much of the process was entwined into the Dart side,
+like writing all the bindings to the browser
+(*not sure if I understood that note correctly*). 
+They also had limitations around using the DOM,
+typing (which is a cornerstone of Dart),
+and expanding to new interop types
+(*this is me trying to refer to wasm without actually saying, idk if "interop types" is the right term*). 
+
+Static interop addresses all of the shortcomings of Dart's previous JS interop solutions.
+Check out the [Features](#features) section for a summary of improvements. 
+
+[previous iterations of JS interop]: /web/js-interop/past-js-interop
 
 ## Usage
 
@@ -96,15 +104,14 @@ For tutorials and help:
 * [How to interop with DOM APIs][]
 * [How to interop with JavaScript libraries and apps][]
 * [How to test and mock JavaScript interop in Dart][]
-* [JS interop FAQ & troubleshooting][]
 
 For additonal types of documentation on `js_interop`:
   * [pub.dev site page][]
   * [API reference][]
 
 For information on other iterations of JS interop in Dart:
-  * [Previous offerings/comparison page][]
-  * [migrating from old to new][]
+  * [`dart:js_util`][]
+  * [Past JS interop][]
 
 
 [inline classes]: /
@@ -112,8 +119,7 @@ For information on other iterations of JS interop in Dart:
 [How to interop with DOM APIs]: /web/js-interop/dom
 [How to interop with JavaScript libraries and apps]: /web/js-interop/js-app
 [How to test and mock JavaScript interop in Dart]: /web/js-interop/test-and-mock
-[JS interop FAQ & troubleshooting]: /web/js-interop/faq-troubleshooting
 [pub.dev site page]: /
 [API reference]: /
-[Previous offerings/comparison page]: /web/js-interop/past-js-interop
-[migrating from old to new]: /web/js-interop/migration
+[`dart:js_util`]: /web/js-interop/js-util
+[Past JS interop]: /web/js-interop/past-js-interop

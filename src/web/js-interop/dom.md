@@ -4,7 +4,7 @@ description:
 ---
 
 {{site.why.learn}}
-  * 
+  * How to...
 {{site.why.end}}
 
 // *Introdcution paragraphs*
@@ -35,4 +35,4 @@ Step subsections should be actionalble, like "Build...", "Retrieve...", "Configu
 
 ## What next?
 
-Point to JS tutorial, testing and mocking tutorial
+Point to other tutorials, reference, etc.

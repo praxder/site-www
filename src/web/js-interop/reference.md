@@ -1,6 +1,6 @@
 ---
-title: Static interop reference
-description: A glossary of key terms and concepts in JS interop and static interop.
+title: JS interop reference
+description: A glossary of key terms and concepts in JS interop.
 ---
 
 ## Members
@@ -120,9 +120,12 @@ Just write an extension and add members.
 
 ### `@JS`
 
-The `@JS` annotation indicates any kind of JavaScript interop. It provides the bindings
-between a JavaScript API and your Dart API. The use of `@JS` interop, combined with
-[inline classes](#inline-classes), is what makes static interop possible. 
+The `@JS` annotation belongs to the `dart:js_interop` library.
+It specifies that you're using JavaScript interop,
+as opposed to any other kind of interop.
+It provides the bindings between a JavaScript API and your Dart API.
+The use of `@JS` interop, combined with [inline classes](#inline-classes),
+is what makes static interop possible. 
 
 #### Usage:
 
@@ -133,6 +136,11 @@ between a JavaScript API and your Dart API. The use of `@JS` interop, combined w
 
 // specify `external` declaration is JS
 ```
+
+The `@JS` annotation was also a member of one of Dart's past JS interop solutions,
+`package:js`. You can read more about that on the [Past JS interop][] page.
+
+[Past JS interop]: /web/js-interop/past-js-interop
 
 ### `@staticInterop`
 
@@ -150,9 +158,5 @@ Inline classes and the `@JS` annotations replace the functionality of `@staticIn
 ...
 ```
 
-### others?
-
-// *anything that can still be used with static interop should be added here,*
-*but if they're not going to be used anymore let's keep that all on the "Past" page*
 
 
